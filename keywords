@@ -1,0 +1,9 @@
+import keyword
+
+# Get the list of all Python keywords
+keywords_list = keyword.kwlist
+
+print("List of all Python keywords:")
+
+for kw in keywords_list:
+    print(kw)
