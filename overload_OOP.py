@@ -15,8 +15,8 @@ class book:
     def __mod__(self,other):
         return self.page%other.page   
     
-    #def __div__(self,other):     #TypeError: unsupported operand type(s) for /: 'book' and 'book'
-        #return self.page/other.page   
+    def __truediv__(self,other):     
+        return self.page/other.page   
     
     def __floordiv__(self,other):
         return self.page//other.page  
@@ -33,11 +33,11 @@ class book:
     def __lt__(self,other):
         return self.page<other.page 
     
-    #def __gte__(self,other):           #TypeError: '>=' not supported between instances of 'book' and 'book'
-        #return self.page>=other.page 
+    def __ge__(self,other):          
+        return self.page>=other.page 
     
-    #def __lte__(self,other):
-        #return self.page<=other.page   # TypeError: '<=' not supported between instances of 'book' and 'book'
+    def __le__(self,other):
+        return self.page<=other.page   
     
 b1=book("The End Is Beginning",250)
 b2=book("Rich Dad Poor Dad",25)
@@ -46,13 +46,13 @@ print(b1+b2)
 print(b1-b2)     
 print(b1*b2)   
 print(b1%b2)
-#print(b1/b2)
+print(b1/b2)
 print(b1//b2)
 print(b1==b2)
 print(b1!=b2)
 print(b1>b2)
 print(b1<b2)
-#print(b1>=b2)
-#print(b1<=b2)
+print(b1>=b2)
+print(b1<=b2)
 
         
